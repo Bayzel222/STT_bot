@@ -65,8 +65,8 @@ def get_finish(message):
 	bot.send_message(message.chat.id, 'Нажмите "Итоговая стоимость", чтобы получить стоимость автомобиля', reply_markup = keyboard)
 	bot.register_next_step_handler(message, finish)
 def finish(message):
-	year = int(res[0]+res[1])
+	Summa = int(res[0]+res[1])
 	bot.send_message(message.from_user.id, 'Сумма вашего платежа')
-	bot.send_message(message.chat.id, year)
+	bot.send_message(message.chat.id, Summa)
 
 bot.polling()
